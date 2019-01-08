@@ -11,7 +11,7 @@ RUN yum update -y && yum install epel-release -y && yum update -y && yum install
 
 # 2.准备node
 RUN curl --silent --location https://rpm.nodesource.com/setup_8.x | bash -
-RUN yum install -y nodejs
+RUN yum install -y nodejs && npm update -g
 
 # 3. 复制代码
 ADD . /var/www/ops_demo/
