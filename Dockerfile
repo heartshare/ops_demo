@@ -18,6 +18,7 @@ ADD . /var/www/ops_demo/
 WORKDIR /var/www/ops_demo/
 
 # 4. 编译代码
+RUN npm install
 RUN npm run build
 
 # 5. 准备文件
