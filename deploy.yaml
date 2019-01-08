@@ -19,13 +19,13 @@ spec:
         ports:
         - name: http
           containerPort: 80
-        # volumeMounts:
-        #     - name: demonginx
-        #       mountPath: /etc/nginx/conf.d/
-      # volumes:
-      #   - name: demonginx
-      #     configMap:
-      #       name: demo-nginx-conf  # kubectl create configmap demo-nginx-conf --from-file=./nginx_demo.conf -n qa
+        volumeMounts:
+          - name: demonginx
+            mountPath: /etc/nginx/conf.d/
+      volumes:
+        - name: demonginx
+          configMap:
+            name: demo-nginx-conf  # kubectl create configmap demo-nginx-conf --from-file=./nginx_demo.conf -n qa
 
 ---
 apiVersion: v1
