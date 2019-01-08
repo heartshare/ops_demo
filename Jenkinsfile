@@ -17,7 +17,7 @@ node('haimaxy-jnlp') {
         echo "4.推送 Docker 镜像到仓库"
         withCredentials([usernamePassword(credentialsId: 'dockerHubSZ', passwordVariable: 'dockerHubSZPassword', usernameVariable: 'dockerHubSZUser')]) {
             sh "docker login -u ${dockerHubSZUser} -p ${dockerHubSZPassword} https://harbor-k8s.shinezone.com"
-            sh "docker push harbor-k8s.shinezone.com/ops/codo-cmdb:${build_tag}"
+            sh "docker push harbor-k8s.shinezone.com/ops/codo-demo:${build_tag}"
         }
     }
     stage('YAML') {
