@@ -156,6 +156,7 @@ export default {
     },
     systemUser: function () {
       const data = this.systemUser
+      console.log(data)
       for (var item in data) {
         this.UserList.push({
           key: data[item].username,

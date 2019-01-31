@@ -277,6 +277,7 @@ export default {
           }
         })
         .catch(error => {
+          this.systemUser = [{id:1,username:'yangmingwei',nickname:'杨铭威'}]
           console.log("Get SystemUser Faild! ");
         });
       // loginGW()
@@ -316,7 +317,7 @@ export default {
   mounted () {
     /** 获取表格数据 **/
     this.getData()
-    // this.getSystemUserData()
+    this.getSystemUserData()
     // console.log('get user->'+ this.$store.getters.user.id)
   }
 }
